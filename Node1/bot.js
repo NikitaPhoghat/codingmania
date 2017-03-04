@@ -1,8 +1,10 @@
-console.log('the bot is starting');
+
 var Twit = require('twit');
 var config= require('./config');
 console.log(config);
-var T = new Twit(config);
+var T = new Twit(config); // Printing config deatils for debugging purpose
+
+//Returns a collection of relevant Tweets matching a specified query(Rainbow).
 
 var param={ q: 'Rainbow', count:20}
 T.get('search/tweets', param, callback);
